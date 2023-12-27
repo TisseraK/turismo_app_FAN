@@ -10,6 +10,7 @@ Création de l'application "Turismo" comme si j'avais été contacté par Angel 
 **DAY 1 :**
 - Mise en place de la AppBar static qui prend l'icon User et le logo Turismo.
 - Début de la Home Page, qui reprend un partie du site internet plus les véhicules classé selon leur catégorie d'abonnement 1-5. BottomSheet qui apparait lors de la sélection du véhicule (EN COUR FIN DAY 1).
+
 Durée : 3H30 => 15H-17H30
 
 # by_TisseraK
