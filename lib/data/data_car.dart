@@ -854,4 +854,39 @@ List<Map> dataCar = [
       'g': '328',
     }
   },
+  {
+    "ID": 24,
+    "Catégorie": 3,
+    "NameCar": "Range Rover LWB",
+    "IMG":
+        'https://static.wixstatic.com/media/bd4349_a48ac8afce6a4eb0ad9bec9c8e0fbceb~mv2.png/v1/fill/w_688,h_350,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Capture%20d%E2%80%99%C3%A9cran%202022-10-12%20%C3%A0%2021_11_edited.png',
+    "TextDescription": "Calme, luxe et volupté.",
+    "Config": [
+      'https://static.wixstatic.com/media/bd4349_a48ac8afce6a4eb0ad9bec9c8e0fbceb~mv2.png/v1/crop/x_0,y_242,w_2294,h_831/fill/w_568,h_206,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Capture%20d%E2%80%99%C3%A9cran%202022-10-12%20%C3%A0%2021_11_edited.png',
+    ],
+    "Spec": {
+      "Puissance": "323 kW/440 ch",
+      "Accélération": "6 sec",
+      "VMax": "225 km/h",
+    },
+    "Prix": {
+      "Abo": {
+        "Prix": 4980,
+        "KM": 1.96,
+        "Caution": 6000,
+      },
+      "Location": {
+        '3day': 820,
+        "4/10Day": 680,
+        "11/28Day": 510,
+        "1/3mois": 9000,
+        'km': 3.4,
+        "Caution": 7500,
+      }
+    },
+    'Conso': {
+      'l': '0,9',
+      'g': '21',
+    }
+  },
 ];

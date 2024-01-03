@@ -15,4 +15,13 @@ Création de l'application "Turismo" comme si j'avais été contacté par Angel 
 
 Durée : 3H30 => 14H-17H30
 
+**DAY 2**
+- Mise en place de Widget pour le text en gradiant.
+- Fin du bottomSheet info des voitures.
+- Add Cat 3, 4, 5 sur la HomePage
+
+Durée 1H30 => 11H00-12H30
+Total : 5H00
+
+
 # by_TisseraK
