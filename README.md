@@ -24,8 +24,8 @@ Durée 1H30 => 11H00-12H30
 Total : 5H00
 
 **DAY 3**
-- 
+- Création AUTH + User
 
-Durée ? => 17H00-
+Durée 1H00 => 17H00-18H00
 
 # by_TisseraK
