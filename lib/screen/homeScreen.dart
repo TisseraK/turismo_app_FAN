@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:turismo_app/constant/color.dart';
 import 'package:turismo_app/data/data_car.dart';
@@ -27,12 +28,10 @@ class _HomeScreenState extends State<HomeScreen> {
     var _w = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: fondGrey,
-      body: Container(
-        height: _h,
-        width: _w,
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            appBarTurismo(_h, _w, context),
+            appBarTurismo(_h, _w, context, false),
             Container(
                 height: _h * 0.8,
                 width: _w,
@@ -143,175 +142,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: CarouselSlider(
                               carouselController: _controllerCarrou,
                               items: cat1
-                                  ? [
-                                      carWidgetHome(
-                                        context,
-                                        _h,
-                                        _w,
-                                        dataCar[0],
-                                      ),
-                                      carWidgetHome(
-                                        context,
-                                        _h,
-                                        _w,
-                                        dataCar[1],
-                                      ),
-                                      carWidgetHome(
-                                        context,
-                                        _h,
-                                        _w,
-                                        dataCar[2],
-                                      ),
-                                      carWidgetHome(
-                                        context,
-                                        _h,
-                                        _w,
-                                        dataCar[3],
-                                      ),
-                                      carWidgetHome(
-                                        context,
-                                        _h,
-                                        _w,
-                                        dataCar[4],
-                                      ),
-                                    ]
+                                  ? carCat1(context, _h, _w)
                                   : cat2
-                                      ? [
-                                          carWidgetHome(
-                                            context,
-                                            _h,
-                                            _w,
-                                            dataCar[5],
-                                          ),
-                                          carWidgetHome(
-                                            context,
-                                            _h,
-                                            _w,
-                                            dataCar[6],
-                                          ),
-                                          carWidgetHome(
-                                            context,
-                                            _h,
-                                            _w,
-                                            dataCar[7],
-                                          ),
-                                          carWidgetHome(
-                                            context,
-                                            _h,
-                                            _w,
-                                            dataCar[8],
-                                          ),
-                                          carWidgetHome(
-                                            context,
-                                            _h,
-                                            _w,
-                                            dataCar[9],
-                                          ),
-                                          carWidgetHome(
-                                            context,
-                                            _h,
-                                            _w,
-                                            dataCar[10],
-                                          ),
-                                          carWidgetHome(
-                                            context,
-                                            _h,
-                                            _w,
-                                            dataCar[11],
-                                          )
-                                        ]
+                                      ? carCat2(context, _h, _w)
                                       : cat3
-                                          ? [
-                                              carWidgetHome(
-                                                context,
-                                                _h,
-                                                _w,
-                                                dataCar[12],
-                                              ),
-                                              carWidgetHome(
-                                                context,
-                                                _h,
-                                                _w,
-                                                dataCar[13],
-                                              ),
-                                              carWidgetHome(
-                                                context,
-                                                _h,
-                                                _w,
-                                                dataCar[14],
-                                              ),
-                                              carWidgetHome(
-                                                context,
-                                                _h,
-                                                _w,
-                                                dataCar[24],
-                                              ),
-                                            ]
+                                          ? carCat3(context, _h, _w)
                                           : cat4
-                                              ? [
-                                                  carWidgetHome(
-                                                    context,
-                                                    _h,
-                                                    _w,
-                                                    dataCar[14],
-                                                  ),
-                                                  carWidgetHome(
-                                                    context,
-                                                    _h,
-                                                    _w,
-                                                    dataCar[15],
-                                                  ),
-                                                  carWidgetHome(
-                                                    context,
-                                                    _h,
-                                                    _w,
-                                                    dataCar[16],
-                                                  ),
-                                                  carWidgetHome(
-                                                    context,
-                                                    _h,
-                                                    _w,
-                                                    dataCar[17],
-                                                  ),
-                                                  carWidgetHome(
-                                                    context,
-                                                    _h,
-                                                    _w,
-                                                    dataCar[18],
-                                                  ),
-                                                ]
-                                              : [
-                                                  carWidgetHome(
-                                                    context,
-                                                    _h,
-                                                    _w,
-                                                    dataCar[19],
-                                                  ),
-                                                  carWidgetHome(
-                                                    context,
-                                                    _h,
-                                                    _w,
-                                                    dataCar[20],
-                                                  ),
-                                                  carWidgetHome(
-                                                    context,
-                                                    _h,
-                                                    _w,
-                                                    dataCar[21],
-                                                  ),
-                                                  carWidgetHome(
-                                                    context,
-                                                    _h,
-                                                    _w,
-                                                    dataCar[22],
-                                                  ),
-                                                  carWidgetHome(
-                                                    context,
-                                                    _h,
-                                                    _w,
-                                                    dataCar[23],
-                                                  ),
-                                                ],
+                                              ? carCat4(context, _h, _w)
+                                              : carCat5(context, _h, _w),
                               options: CarouselOptions(
                                 scrollPhysics: ClampingScrollPhysics(),
                                 onScrolled: null,

@@ -1,6 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:turismo_app/screen/auth.dart';
 
-Widget appBarTurismo(var _h, var _w, BuildContext context) {
+Widget appBarTurismo(
+    var _h, var _w, BuildContext context, bool backToHomePage) {
   return Container(
     padding: EdgeInsets.only(top: _h * 0.05, left: _w * 0.05, right: _w * 0.15),
     height: _h * 0.15,
@@ -11,7 +14,12 @@ Widget appBarTurismo(var _h, var _w, BuildContext context) {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           GestureDetector(
-              onTap: () {},
+              onTap: () async {
+                containerAnim = 0;
+                backToHomePage
+                    ? Navigator.pushNamed(context, '/homePage')
+                    : Navigator.pushNamed(context, '/authPage');
+              },
               child: Container(
                 height: _h * 0.10,
                 width: _h * 0.05,
@@ -25,7 +33,8 @@ Widget appBarTurismo(var _h, var _w, BuildContext context) {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(360)),
                         child: Center(
-                          child: Icon(Icons.person),
+                          child:
+                              Icon(backToHomePage ? Icons.home : Icons.person),
                         ),
                       ),
                     ]),

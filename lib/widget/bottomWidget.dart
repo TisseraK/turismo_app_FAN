@@ -109,7 +109,7 @@ Widget bottomWidget(var _h, var _w, Map bdd) {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
-                  height: _h * 0.5,
+                  height: _h * 0.6,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -151,7 +151,7 @@ Widget bottomWidget(var _h, var _w, Map bdd) {
                   ),
                 ),
                 Container(
-                  height: _h * 0.5,
+                  height: _h * 0.6,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

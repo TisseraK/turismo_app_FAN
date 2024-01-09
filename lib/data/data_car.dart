@@ -1,3 +1,187 @@
+import 'package:flutter/material.dart';
+import 'package:turismo_app/widget/carWidgetHome.dart';
+
+List<Widget> carCat1(BuildContext context, var _h, var _w) {
+  return [
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[0],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[1],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[2],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[3],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[4],
+    ),
+  ];
+}
+
+List<Widget> carCat2(BuildContext context, var _h, var _w) {
+  return [
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[5],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[6],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[7],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[8],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[9],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[10],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[11],
+    )
+  ];
+}
+
+List<Widget> carCat3(BuildContext context, var _h, var _w) {
+  return [
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[12],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[13],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[14],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[24],
+    ),
+  ];
+}
+
+List<Widget> carCat4(BuildContext context, var _h, var _w) {
+  return [
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[14],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[15],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[16],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[17],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[18],
+    ),
+  ];
+}
+
+List<Widget> carCat5(BuildContext context, var _h, var _w) {
+  return [
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[19],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[20],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[21],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[22],
+    ),
+    carWidgetHome(
+      context,
+      _h,
+      _w,
+      dataCar[23],
+    ),
+  ];
+}
+
 List<Map> dataCar = [
   {
     "ID": 0,
