@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
     var _w = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: fondGrey,
-      body: SingleChildScrollView(
+      body: Container(height: _h,width: _w,child: SingleChildScrollView(
         child: Column(
           children: [
             appBarTurismo(_h, _w, context, false),
@@ -144,12 +144,12 @@ class _HomeScreenState extends State<HomeScreen> {
                               items: cat1
                                   ? carCat1(context, _h, _w)
                                   : cat2
-                                      ? carCat2(context, _h, _w)
-                                      : cat3
-                                          ? carCat3(context, _h, _w)
-                                          : cat4
-                                              ? carCat4(context, _h, _w)
-                                              : carCat5(context, _h, _w),
+                                  ? carCat2(context, _h, _w)
+                                  : cat3
+                                  ? carCat3(context, _h, _w)
+                                  : cat4
+                                  ? carCat4(context, _h, _w)
+                                  : carCat5(context, _h, _w),
                               options: CarouselOptions(
                                 scrollPhysics: ClampingScrollPhysics(),
                                 onScrolled: null,
@@ -171,7 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ))
           ],
         ),
-      ),
+      ),),
     );
   }
 }

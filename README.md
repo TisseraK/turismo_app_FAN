@@ -8,7 +8,8 @@ Création de l'application "Turismo" comme si j'avais été contacté par Angel 
 - Ajout des plugins qui me semble nécessaire à l'instant.
 
 **DAY 1 :**
-- Création des assets / IMG / Color
+- Création des assets / I
+- MG / Color
 - Création des data des voitures => sources site web Turismo
 - Mise en place de la AppBar static qui prend l'icon User et le logo Turismo.
 - Début de la Home Page, qui reprend un partie du site internet plus les véhicules classé selon leur catégorie d'abonnement 1-5. BottomSheet qui apparait lors de la sélection du véhicule (EN COUR FIN DAY 1).
@@ -28,4 +29,9 @@ Total : 5H00
 
 Durée 1H00 => 17H00-18H00
 
+**DAY 4**
+- Pop up "Problème".
+- Pop up changement de voiture.
+
+Durée 1H30 => 20H00-21H30
 # by_TisseraK

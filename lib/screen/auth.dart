@@ -26,12 +26,13 @@ class _AuthPageState extends State<AuthPage> {
       body: Container(
           height: _h,
           width: _w,
-          child: Column(children: [
+          child:  Column(children: [
             appBarTurismo(_h, _w, context, true),
-            Expanded(
-                child: SingleChildScrollView(
+            Container(
+              height: _h*0.8,
+                    width: _w,
                     child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                   padingTurismo(10),
                   Container(
@@ -120,7 +121,7 @@ class _AuthPageState extends State<AuthPage> {
                           ),
                         )),
                   )
-                ])))
+                ]))
           ])),
     );
   }

@@ -10,10 +10,6 @@ import 'package:turismo_app/widget/appbarTurismo.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  await FirebaseAuth.instance.authStateChanges();
   runApp(MyApp());
 }
 

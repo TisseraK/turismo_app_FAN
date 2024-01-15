@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:turismo_app/constant/color.dart';
 import 'package:turismo_app/widget/bottomWidget.dart';
@@ -30,8 +31,18 @@ Widget carWidgetHome(
           Container(
             height: _h * 0.2,
             width: _w * 0.7,
-            decoration: BoxDecoration(
-                image: DecorationImage(image: NetworkImage(text['IMG']))),
+            child: CachedNetworkImage(
+              imageUrl: text['IMG'], imageBuilder: (context, imageProvider) => Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: imageProvider,
+
+            ),)),
+
+
+              errorWidget: (context, url, error) => Icon(Icons.error),
+            ),
+
           ),
           Container(
             width: _w * 0.7,
