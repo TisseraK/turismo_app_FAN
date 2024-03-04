@@ -74,12 +74,14 @@ class _UserScreenState extends State<UserScreen> {
                                               return AlertDialog(
                                                 actions: [
                                                   GestureDetector(
-                                                    onTap: () {},
+                                                    onTap: () {
+                                                      Navigator.pop(context);
+                                                    },
                                                     child: Container(
                                                       padding:
                                                           EdgeInsets.all(10),
                                                       child: Text(
-                                                        'Appeler',
+                                                        'Être appeler',
                                                         style: TextStyle(
                                                             color: white,
                                                             fontWeight:
@@ -177,19 +179,95 @@ class _UserScreenState extends State<UserScreen> {
                                                   ),
                                                   GestureDetector(
                                                     onTap: () async {
-carWidget.clear();
+                                                      carWidget.clear();
                                                       for (var i = 0;
                                                           i < dataCar.length;
                                                           i++) {
                                                         carWidget.add(
-                                                            widgetGridViewCar(
-                                                          context,
-                                                          dataCar[i]['IMG'],
-                                                          _w,
-                                                          dataCar[i]['Dispo'],
-                                                          dataCar[i]
-                                                              ['Catégorie'],
-                                                        ));
+                                                          GestureDetector(
+                                                              onTap: () async {
+                                                                if (dataCar[i]
+                                                                    ['Dispo']) {
+                                                                  Navigator.pop(
+                                                                      context);
+                                                                  Navigator.pop(
+                                                                      context);
+                                                                  showDialog(
+                                                                    context:
+                                                                        context,
+                                                                    builder:
+                                                                        (context) =>
+                                                                            Dialog(
+                                                                      insetPadding:
+                                                                          EdgeInsets
+                                                                              .zero,
+                                                                      backgroundColor:
+                                                                          Colors
+                                                                              .transparent,
+                                                                      child:
+                                                                          Container(
+                                                                        height: _h *
+                                                                            0.3,
+                                                                        width: _w *
+                                                                            0.9,
+                                                                        decoration: BoxDecoration(
+                                                                            color:
+                                                                                noirGris,
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(30)),
+                                                                        child: Column(
+                                                                            mainAxisAlignment:
+                                                                                MainAxisAlignment.spaceAround,
+                                                                            children: [
+                                                                              Text(
+                                                                                'Demande envoyée\nUn opérateur prendra contact avec vous.',
+                                                                                textAlign: TextAlign.center,
+                                                                                style: TextStyle(
+                                                                                    color: Colors.white,
+                                                                                    fontWeight: FontWeight.bold,
+                                                                                    shadows: [
+                                                                                      Shadow(offset: Offset(2, 2)),
+                                                                                    ],
+                                                                                    fontSize: _h * 0.03),
+                                                                              ),
+                                                                              GestureDetector(
+                                                                                onTap: () {
+                                                                                  Navigator.pop(context);
+                                                                                },
+                                                                                child: Container(
+                                                                                  width: _w * 0.35,
+                                                                                  decoration: BoxDecoration(color: blue, borderRadius: BorderRadius.circular(30)),
+                                                                                  child: Text(
+                                                                                    'Valider',
+                                                                                    textAlign: TextAlign.center,
+                                                                                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: _h * 0.03),
+                                                                                  ),
+                                                                                ),
+                                                                              )
+                                                                            ]),
+                                                                      ),
+                                                                    ),
+                                                                  );
+                                                                }
+                                                              },
+                                                              child: Stack(
+                                                                alignment:
+                                                                    Alignment
+                                                                        .center,
+                                                                children: [
+                                                                  widgetGridViewCar(
+                                                                    context,
+                                                                    dataCar[i]
+                                                                        ['IMG'],
+                                                                    _w,
+                                                                    dataCar[i][
+                                                                        'Dispo'],
+                                                                    dataCar[i][
+                                                                        'Catégorie'],
+                                                                  )
+                                                                ],
+                                                              )),
+                                                        );
                                                       }
 
                                                       showModalBottomSheet(
@@ -234,11 +312,55 @@ carWidget.clear();
                                                                         MainAxisAlignment
                                                                             .spaceAround,
                                                                     children: [
-                                                                      padingTurismo(
-                                                                          20),
                                                                       GestureDetector(
                                                                         onTap:
-                                                                            () {},
+                                                                            () {
+                                                                          Navigator.pop(
+                                                                              context);
+                                                                          Navigator.pop(
+                                                                              context);
+                                                                          showDialog(
+                                                                            context:
+                                                                                context,
+                                                                            builder: (context) =>
+                                                                                Dialog(
+                                                                              insetPadding: EdgeInsets.zero,
+                                                                              backgroundColor: Colors.transparent,
+                                                                              child: Container(
+                                                                                height: _h * 0.3,
+                                                                                width: _w * 0.9,
+                                                                                decoration: BoxDecoration(color: noirGris, borderRadius: BorderRadius.circular(30)),
+                                                                                child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+                                                                                  Text(
+                                                                                    'Demande envoyée\nUn opérateur prendra contact avec vous.',
+                                                                                    textAlign: TextAlign.center,
+                                                                                    style: TextStyle(
+                                                                                        color: Colors.white,
+                                                                                        fontWeight: FontWeight.bold,
+                                                                                        shadows: [
+                                                                                          Shadow(offset: Offset(2, 2)),
+                                                                                        ],
+                                                                                        fontSize: _h * 0.03),
+                                                                                  ),
+                                                                                  GestureDetector(
+                                                                                    onTap: () {
+                                                                                      Navigator.pop(context);
+                                                                                    },
+                                                                                    child: Container(
+                                                                                      width: _w * 0.35,
+                                                                                      decoration: BoxDecoration(color: blue, borderRadius: BorderRadius.circular(30)),
+                                                                                      child: Text(
+                                                                                        'Valider',
+                                                                                        textAlign: TextAlign.center,
+                                                                                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: _h * 0.03),
+                                                                                      ),
+                                                                                    ),
+                                                                                  )
+                                                                                ]),
+                                                                              ),
+                                                                            ),
+                                                                          );
+                                                                        },
                                                                         child:
                                                                             Text(
                                                                           'Passer',
@@ -246,32 +368,6 @@ carWidget.clear();
                                                                               TextStyle(color: blue),
                                                                         ),
                                                                       ),
-                                                                      GestureDetector(
-                                                                        onTap:
-                                                                            () {
-                                                                          Navigator.pop(
-                                                                              context);
-                                                                        },
-                                                                        child:
-                                                                            Container(
-                                                                          padding: EdgeInsets.fromLTRB(
-                                                                              30,
-                                                                              10,
-                                                                              30,
-                                                                              10),
-                                                                          child:
-                                                                              Text(
-                                                                            'Valider',
-                                                                            style:
-                                                                                TextStyle(color: white, fontWeight: FontWeight.bold),
-                                                                          ),
-                                                                          decoration: BoxDecoration(
-                                                                              color: blue,
-                                                                              borderRadius: BorderRadius.circular(30)),
-                                                                        ),
-                                                                      ),
-                                                                      padingTurismo(
-                                                                          20),
                                                                     ],
                                                                   )
                                                                 ],
