@@ -7,6 +7,8 @@ import 'package:turismo_app/widget/appbarTurismo.dart';
 import 'package:turismo_app/widget/pading.dart';
 import 'package:turismo_app/widget/widgetGridViewCar.dart';
 
+import '../widget/carList.dart';
+
 class UserScreen extends StatefulWidget {
   const UserScreen({super.key});
 
@@ -23,14 +25,11 @@ class _UserScreenState extends State<UserScreen> {
         backgroundColor: noirGris,
         body: Container(
           height: _h,
-          width: _w,
+          width: _w,color: noirGris,
           child: Column(
             children: [
               appBarTurismo(_h, _w, context, true),
-              Container(
-                  color: noirGris,
-                  height: _h * 0.85,
-                  width: _w,
+              Expanded(
                   child: Column(
                     children: [
                       Container(
@@ -446,6 +445,16 @@ class _UserScreenState extends State<UserScreen> {
                               ),
                             ],
                           )),
+                      //Création partie "Car Storage"
+                      Padding(padding: EdgeInsets.all(10)),
+                      Container(width:_w*0.85,child: Text('Car storage :',style: TextStyle(color: Colors.white,fontSize: _h*0.03,fontWeight: FontWeight.bold),),),
+                      Container(height: _h*0.35,
+                        width: _w*0.85,
+                        child: ListView(children: [GestureDetector(child: carList(_h,_w,"Porsche 911 GT3 RS",dataCar[16]['Config'].first,"24/06/2000"),
+                        onTap: (){showDialog(context: context, builder:(BuildContext context) {
+                          return Dialog();
+                        });},)],),
+                      ),
                     ],
                   ))
             ],
